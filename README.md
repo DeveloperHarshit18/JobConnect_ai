@@ -136,20 +136,28 @@ Backend:  http://localhost:5000
 
 ## ⚙️ Environment Variables
 
-Create a `.env` file in the `/server` directory:
+Create a `.env` file in the `/server` directory using the provided `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Then configure the following variables:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/jobconnect-ai
+MONGODB_URI=your_mongodb_connection_uri
 JWT_SECRET=your_secret_key
 JWT_EXPIRE=7d
-OPENAI_API_KEY=your_openai_key        # Optional - mock analysis works without it
+OPENAI_API_KEY=your_openai_key              # Optional - mock analysis works without it
 EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_app_password
 CLIENT_URL=http://localhost:5173
 ```
+
+See `.env.example` for a complete template.
 
 ---
 
